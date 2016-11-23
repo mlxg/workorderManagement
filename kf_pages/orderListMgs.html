@@ -29,31 +29,31 @@
                     <ul>
                         <li>
                             <label>工单编号：</label>
-                            <input type="text" id="inputOrderNum">
+                            <input type="text" class="workOrderNo">
                         </li>
                         <li>
                             <label>客户名称：</label>
-                            <input type="text" id="inputUserName">
+                            <input type="text" class="customerName">
                         </li>
                         <li>
                             <label>客户电话：</label>
-                            <input type="text" id="inputUserPhone">
+                            <input type="text">
                         </li>
                         <li>
                             <label>创建人：</label>
-                            <input type="text">
+                            <input type="text" class="createBy">
                         </li>
                         <li>
                             <label>跟进人：</label>
-                            <input type="text">
+                            <input type="text" class="followerName">
                         </li>
                         <li>
                             <label>车牌号：</label>
-                            <input type="text">
+                            <input type="text" class="carNo">
                         </li>
                         <li>
                             <label>工单类型：</label>
-                            <select>
+                            <select class="type">
                                 <option>请选择</option>
                                 <option>咨询/查询</option>
                                 <option>意见</option>
@@ -64,7 +64,7 @@
                         </li>
                         <li>
                             <label>问题类型：</label>
-                            <select>
+                            <select class="">
                                 <option>请选择</option>
                                 <option>产品套餐相关问题</option>
                                 <option>合同条款相关问题</option>
@@ -76,9 +76,20 @@
                             </select>
                         </li>
                         <li>
+                            <label>工单状态：</label>
+                            <select class="status">
+                                <option>请选择</option>
+                                <option>咨询/查询</option>
+                                <option>意见</option>
+                                <option>投诉</option>
+                                <option>回访</option>
+                                <option>其他</option>
+                            </select>
+                        </li>
+                        <li>
                             <label>创建时间：</label>
-                            <input class="g_data" type="text">-
-                            <input class="g_data" type="text">
+                            <input class="g_data startCreateDate" type="text">-
+                            <input class="g_data endCreateDate" type="text">
                         </li>
                     </ul>
                     <ul class="g_searchBot">
@@ -461,15 +472,15 @@
                     <ul>
                         <li>
                             <label>工单编号：</label>
-                            <input type="text" id="inputOrderNum">
+                            <input type="text">
                         </li>
                         <li>
                             <label>客户名称：</label>
-                            <input type="text" id="inputUserName">
+                            <input type="text">
                         </li>
                         <li>
                             <label>客户电话：</label>
-                            <input type="text" id="inputUserPhone">
+                            <input type="text">
                         </li>
                         <li>
                             <label>创建人：</label>

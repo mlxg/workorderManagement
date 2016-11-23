@@ -51,22 +51,22 @@ function listShow() {
  * 查询工单
  * */
 function checkOrder() {
-    $('.checkOrder').on('click', orderSearch);
-    function orderSearch(event) {
-        var $carNo = $('#carNo').val();
-        var $createBy = $('#createBy').val();
-        var $customerName = $('#customerName').val();
-        var $followerName = $('#followerName').val();
-        var $follower = $('#follower').val();
-        var $type = $('#type').val();
-        var $workOrderNo = $('#workOrderNo').val();
-        var $startCreateDate = $('#startCreateDate').val();
-        var $endCreateDate = $('#endCreateDate').val();
-        var $salesman = $('#creatBy').val();
-        var $salesManager = $('#salesManager').val();
-        var $startFinishDate = $('#startFinishDate').val();
-        var $status = $('#Status').val();
-        var $businessDepatmentId = $("#businessDepatmentId").val();
+    $('#checkOrder').on('click', orderSearch);
+    function orderSearch() {
+        var $carNo = $('.carNo').val();
+        var $createBy = $('.createBy').val();
+        var $customerName = $('.customerName').val();
+        var $followerName = $('.followerName').val();
+        var $follower = $('.follower').val();
+        var $type = $('.type').val();
+        var $workOrderNo = $('.workOrderNo').val();
+        var $startCreateDate = $('.startCreateDate').val();
+        var $endCreateDate = $('.endCreateDate').val();
+        var $salesman = $('.salesman').val();
+        var $salesManager = $('.salesManager').val();
+        var $startFinishDate = $('.startFinishDate').val();
+        var $status = $('.Status').val();
+        var $businessDepatmentId = $('.businessDepatmentId').val();
 
 
         var newSearch = {
@@ -89,7 +89,7 @@ function checkOrder() {
 
         $.ajax({
             contentType: 'application/json',
-            url: 'http://192.168.1.211:8888/a/kefu/workOrder/list',
+            url: 'http://localhost:8888/a/kefu/workOrder/list',
             data: JSON.stringify(newSearch),
             dataType: 'JSON',
             type: 'post',
@@ -98,14 +98,12 @@ function checkOrder() {
 
         function rsData(data) {
             var strHtml = '';
-            var $rsData = $('#rsData').find('tbody');
+            var $rsData = $('.rsData').find('tbody');
             var $json = eval(data['model']['list']);
 
             $.each($json, function (index, value) {
                 strHtml += '<tr>';
-                strHtml += '<td>' + value.id + '</td>';
-                strHtml += '<td>' + value.isNewRecord + '</td>';
-                strHtml += '<td>' + value.customerName + '</td>';
+                strHtml += '<td>' + value.workOrderNo + '</td>';
                 strHtml += '</tr>';
             });
 
