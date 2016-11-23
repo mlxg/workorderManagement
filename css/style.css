@@ -1,0 +1,263 @@
+/*DEFAULT CSS==========================*/
+
+body {
+    font: 12px sans-serif;
+    color: #333;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+td, th {
+    border: 1px solid #ddd;
+}
+
+thead {
+    background: #fdf498;
+}
+
+a {
+    color: #0392cf;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0392cf;
+}
+
+input[type="radio"] {
+    width: auto !important;
+    vertical-align: middle !important;
+    margin: 0 4px !important;
+}
+
+textarea {
+    width: 800px;
+    height: 80px;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+}
+
+/*===========================================*/
+
+.g_searchBar {
+    background: #f5f5f5;
+    padding: 15px 15px 5px 15px;
+}
+
+.g_searchBar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.g_searchBar ul li input {
+    border: none;
+    padding: 3px;
+    margin-left: 11px;
+    width: 120px;
+}
+
+.g_searchBar ul li select {
+    border: none;
+    padding: 3px;
+    margin-left: 12px;
+    width: 125px;
+}
+
+.g_searchBot {
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+
+.g_searchBot li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background: #ffffff;
+    border: 1px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.g_pagination {
+    margin: 10px;
+}
+
+.g_ordersList td, .g_ordersList th {
+    padding: 8px;
+}
+
+.g_data {
+    width: 65px !important;
+    margin: 0 5px 0 3px !important;
+}
+
+.g_listHide_td {
+    position: relative;
+}
+
+.g_listHide_td span {
+    width: 120px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.g_listHead {
+    width: 120px;
+}
+
+.g_listHide_td p {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background: #cccccc;
+    padding: 10px;
+}
+
+/*=====================================*/
+
+.c_newOrder p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.c_newOrder ul {
+    padding: 15px;
+    border: 1px solid #cccccc;
+    background: #f5f5f5;
+}
+
+.c_newOrder ul li {
+    width: 45%;
+}
+
+.c_newOrder ul li label span {
+    color: #EE4035;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+}
+
+.c_newOrder ul li input {
+    padding: 3px;
+    margin-left: 11px;
+    width: 120px;
+    border: 1px solid #cccccc;
+}
+
+.c_newOrder ul li select {
+    padding: 3px;
+    margin-left: 12px;
+    width: 125px;
+    border: 1px solid #cccccc;
+}
+
+.c_problems ul li span {
+    text-indent: 24px;
+    display: inline-block;
+    height: 100px;
+}
+
+.c_problems ul a {
+    background: #3399ff;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #ffffff;
+    right: 0;
+    top: -45px;
+    position: absolute;
+    display: inline-block;
+}
+
+/*工单创建切换*/
+.client_detail {
+    padding: 5px 5px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.nav_tab {
+    padding: 5px 10px;
+}
+
+.nav_tab ul:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.nav_tab ul li {
+    float: left;
+    width: 130px;
+    height: 35px;
+    line-height: 35px;
+    background: #B0AEAE;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.nav_tab ul li:nth-of-type(n+2) {
+    border-left: 0;
+}
+
+.nav_tab ul li.current_active {
+    background: #fff;
+    border-bottom: 0;
+}
+
+.nav_tab ul li:hover {
+    background: #fff;
+}
+
+.nav_banner {
+    padding: 10px 10px;
+}
+
+.nav_banner > div {
+    display: none;
+}
+
+.nav_banner div.c_newOrder {
+    display: block;
+}
+
+.createOrder .workorder_form > li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.createOrder .workorder_form.g_searchBot > li {
+    width: auto;
+}
+
+.client_m {
+    padding: 0 !important;
+}

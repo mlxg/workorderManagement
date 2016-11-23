@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span id="radio">
+    <input type="radio" value="1" name="i" title="">
+    <input type="radio" value="2" name="i" title="">
+    <input type="radio" value="3" name="i" title="">
+</span>
+<input type="text" value="" id="customerName" name="carNo">
+<select name="getData" id="select_1" title="">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+
+<input id="orderCheck" type="button" value="查询"/>
+<!--<div id="userData"></div>-->
+<table id="rsData">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>性别</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script>
+
+
+    $(function () {
+        $('#orderCheck').click(function () {
+            getData();
+        });
+
+    });
+
+    function getData() {
+
+        var $caiNo = $('#carNo').val();
+        var $createBy = $('#createBy').val();
+        var $customerName = $('#customerName').val();
+        var $followerName = $('#followerName').val();
+        var $follower = $('#follower').val();
+        var $type = $('#type').val();
+        var $workOrderNo = $('#workOrderNo').val();
+        var $startCreateDate = $('#startCreateDate').val();
+        var $endCreateDate = $('#endCreateDate').val();
+        var $salesman = $('#CreatBy').val();
+        var $salesManager = $('#salesManager').val();
+        var $startFinishDate = $('#startFinishDate').val();
+        var $status = $('#Status').val();
+        var $businessDepatmentId = $("#businessDepatmentId").val();
+
+        var uData = {
+            "carNo": $caiNo,
+             "createBy.name": $createBy,
+             "customerName": $customerName,
+             "follower.name": $followerName,
+             "follower": $follower,
+             "type": $type,
+             "workOrderNo": $workOrderNo,
+             "startCreateDate": $startCreateDate,
+             "endCreateDate": $endCreateDate,
+             "salesman.name": $salesman,
+             "salesManager.name": $salesManager,
+             "startFinishDate": $startFinishDate,
+             "endFinishDate": $startFinishDate,
+             "status": $status,
+             "businessDepatmentId": $businessDepatmentId
+
+            /*"carNo": "2312312",
+             "createBy.name": "管理",
+             "customerName": "123",
+             "follower.name": "风控",
+             "mobile": "2312312",
+             "type": "2",
+             "workOrderNo": "123456",
+             "startCreateDate": "2015-09-01",
+             "endCreateDate": "2016-11-31",
+             "salesman.name": "管理",
+             "salesManager.name": "管理",
+             "startFinishDate": "",
+             "endFinishDate": "",
+             "status": "",
+             "businessDepatmentId": ""*/
+        };
+
+        $.ajax({
+            headers: {'Content-Type': 'application/json'},
+            url: 'http://192.168.1.211:8888/a/kefu/workOrder/list',
+            async: true,
+            type: 'post',
+            data: JSON.stringify(uData),
+            success: rsData
+        });
+
+        function rsData(data) {
+
+            var strHtml = '';
+            var $rsData = $('#rsData').find('tbody');
+
+            var $json = eval(data['model']['list']);
+
+            $.each($json, function (index,value) {
+                strHtml += '<tr>';
+                strHtml += '<td>' + value.id + '</td>';
+                strHtml += '<td>' + value.isNewRecord + '</td>';
+                strHtml += '<td>' + value.customerName + '</td>';
+                strHtml += '</tr>';
+            });
+
+            $rsData.html(strHtml);
+        }
+    }
+</script>
+</body>
+</html>

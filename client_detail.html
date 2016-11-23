@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>客户详细视图</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/work_order.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/work_order.js"></script>
+</head>
+<body>
+	<div class="client_detail">
+    	<div class="nav_switch">
+        	<ul>
+            	<li class="current">客户资料查看</li>
+                <li>历史工单</li>
+                <li>车辆及违章信息</li>
+                <li>月缴费清单</li>
+                <li>保险理赔退款</li>
+            </ul>
+        </div>
+        <div class="nav_list">
+        	<div class="client_info">
+            	<ul> 
+                    <li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>销售订单信息</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table">
+                            <table class="order_form">
+                                <tbody>
+                                    <tr>
+                                        <td>订单号</td>
+                                        <td>SZ201608080001</td>
+                                        <td>订单状态</td>
+                                        <td>已提车</td>
+                                        <td>下单时间</td>
+                                        <td>2016-08-08</td>
+                                        <td>签合同时间</td>
+                                        <td>2016-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>提车时间</td>
+                                        <td>2016-08-15</td>
+                                        <td>车牌号</td>
+                                        <td>粤A0315C</td>
+                                        <td>发动机号</td>
+                                        <td colspan="3">0567CDJKL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>提车省份</td>
+                                        <td>广东</td>
+                                        <td>提车城市</td>
+                                        <td>广州</td>
+                                        <td>停放地址</td>
+                                        <td colspan="3">广东省广州市海珠区工业大道停车场</td>
+                                    </tr>
+                                    <tr>
+                                        <td>品牌</td>
+                                        <td>东风日产</td>
+                                        <td>系列</td>
+                                        <td>轩逸</td>
+                                        <td>省份</td>
+                                        <td>广东</td>
+                                        <td>城市</td>
+                                        <td>广州</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>车辆权属公司</td>
+                                        <td colspan="3">广州专驾汽车租赁有限公司南京分公司</td>
+                                        <td>租赁公司</td>
+                                        <td colspan="3">广州专驾汽车租赁有限公司南京分公司</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>套餐名</th>
+                                        <th>车牌地</th>
+                                        <th>车型</th>
+                                        <th>车辆类型</th>
+                                        <th>期数</th>
+                                        <th>套餐总价</th>
+                                        <th>收款</th>
+                                        <th>月供</th>
+                                        <th>尾数</th>
+                                        <th>结算周期</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>粤B轩逸24-Bb</td>
+                                        <td>粤A</td>
+                                        <td>1.6XE经典自动舒适版</td>
+                                        <td>新车</td>
+                                        <td>24</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>期初</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>修改记录</th>
+                                        <th>所选套餐名</th>
+                                        <th>车牌地</th>
+                                        <th>车型</th>
+                                        <th>车辆类型</th>
+                                        <th>期数</th>
+                                        <th>套餐总价</th>
+                                        <th>收款</th>
+                                        <th>月供</th>
+                                        <th>尾数</th>                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2016-06-01</td>
+                                        <td>粤B轩逸24-Bb</td>
+                                        <td>粤A</td>
+                                        <td>1.6XE经典自动舒适版</td>
+                                        <td>新车</td>
+                                        <td>24</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-05-25</td>
+                                        <td>粤B轩逸24-Bb</td>
+                                        <td>粤A</td>
+                                        <td>1.6XE经典自动舒适版</td>
+                                        <td>新车</td>
+                                        <td>24</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016-05-20</td>
+                                        <td>粤B轩逸24-Bb</td>
+                                        <td>粤A</td>
+                                        <td>1.6XE经典自动舒适版</td>
+                                        <td>新车</td>
+                                        <td>24</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                        <td>24,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>                            
+                        </div>
+                    </li>
+                    <li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>客户资料</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table hide">
+                            <table class="customer_info">
+                                <tbody>
+                                    <tr>
+                                        <td>销售渠道</td>
+                                        <td>公司销售团队</td>
+                                        <td>代理商名称</td>
+                                        <td>CJK</td>
+                                        <td>进件渠道</td>
+                                        <td>互联网</td>
+                                    </tr>
+                                    <tr>
+                                        <td>销售人员</td>
+                                        <td>张三</td>
+                                        <td>销售经理</td>
+                                        <td>李四</td>
+                                        <td>销售团队</td>
+                                        <td>李四团队</td>
+                                    </tr>
+                                    <tr>
+                                        <td>客户姓名</td>
+                                        <td>王五</td>
+                                        <td>移动电话</td>
+                                        <td>13800000000</td>
+                                        <td>邮箱</td>
+                                        <td>10086.cn</td>
+                                    </tr>
+                                    <tr>
+                                        <td>性别</td>
+                                        <td>男</td>
+                                        <td>婚姻状况</td>
+                                        <td>已婚</td>
+                                        <td>年龄</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>身份证号</td>
+                                        <td>441424197012256789</td>
+                                        <td>有效期</td>
+                                        <td>2005-08-08至2025-08-08</td>
+                                        <td>户籍地址</td>
+                                        <td>广东省广州市天河区珠江新城</td>
+                                    </tr>
+                                    <tr>
+                                        <td>居住省份</td>
+                                        <td>广东</td>
+                                        <td>居住城市</td>
+                                        <td>广州</td>
+                                        <td>居住地址</td>
+                                        <td>广州市天河区珠江新城</td>
+                                    </tr>
+                                    <tr>
+                                        <td>住房情况</td>
+                                        <td>按揭</td>
+                                        <td>居住时长</td>
+                                        <td>3年以上</td>
+                                        <td>住房面积</td>
+                                        <td>100平米</td>
+                                    </tr>
+                                    <tr>
+                                        <td>QQ号</td>
+                                        <td>123456</td>
+                                        <td>微信</td>
+                                        <td>CJK</td>
+                                        <td>微博</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>驾驶证初领日期</td>
+                                        <td>2015-08-08</td>
+                                        <td>准驾车型</td>
+                                        <td>小型汽车</td>
+                                        <td>驾驶证号</td>
+                                        <td>440940199012255678</td>
+                                    </tr>
+                                    <tr>
+                                        <td>驾驶证档案编号</td>
+                                        <td>441601302793</td>
+                                        <td>驾龄</td>
+                                        <td colspan="3">3年</td>
+                                    </tr>
+                                    <tr>
+                                        <td>配偶姓名</td>
+                                        <td>小丽</td>
+                                        <td>配偶身份证号</td>
+                                        <td>441424199108092456</td>
+                                        <td>配偶手机号</td>
+                                        <td>15824567809</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>联系人姓名</th>
+                                        <th>关系</th>
+                                        <th>电话</th>
+                                        <th>联系地址</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>陈小</td>
+                                        <td>父</td>
+                                        <td>13800000000</td>
+                                        <td>罗湖区东门路123号</td>
+                                    </tr>
+                                    <tr>
+                                        <td>李芳</td>
+                                        <td>母</td>
+                                        <td>13800000000</td>
+                                        <td>罗湖区东门路123号</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>受雇起止日期</th>
+                                        <th>公司名称</th>
+                                        <th>职位</th>
+                                        <th>月薪（元）</th>
+                                        <th>公司电话</th>
+                                        <th>离职原因</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2014-05--至今</td>
+                                        <td>深圳万科房地产公司</td>
+                                        <td>销售代表</td>
+                                        <td>12,000</td>
+                                        <td>0755-88257890</td>
+                                        <td>在职</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>审批过程</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table hide">
+                        	<table>
+                                <thead>
+                                    <tr>
+                                        <th>上一状态</th>
+                                        <th>审批决定</th>
+                                        <th>当前状态</th>
+                                        <th>风控审批条件</th>
+                                        <th>操作人</th>
+                                        <th>操作时间</th>
+                                        <th>备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>待风控审核</td>
+                                        <td>不通过</td>
+                                        <td>待管理审核</td>
+                                        <td></td>
+                                        <td>张三</td>
+                                        <td>2016-06-06</td>
+                                        <td>因信用不佳、建议拒绝、详情如风控意见</td>
+                                    </tr>
+                                    <tr>
+                                        <td>待销售经理审核</td>
+                                        <td>通过</td>
+                                        <td>待风控审核</td>
+                                        <td></td>
+                                        <td>李四</td>
+                                        <td>2016-06-06</td>
+                                        <td>【资料审核通过】</td>
+                                    </tr>
+                                    <tr>
+                                        <td>待风控审核</td>
+                                        <td>提交</td>
+                                        <td>待管理审核</td>
+                                        <td></td>
+                                        <td>王五</td>
+                                        <td>2016-06-06</td>
+                                        <td></td>
+                                    </tr>
+                            	</tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+                <div class="operationBtn">
+                    <a href="#"><button class="goBack">返回</button></a>
+                </div>
+            </div>
+            <div class="historical_work_order">
+            	<table>
+                    <thead>
+                        <tr>
+                            <th>工单编号</th>
+                            <th>工单类型</th>
+                            <th>问题类型</th>
+                            <th>工单来源</th>
+                            <th>客户名称</th>
+                            <th>客户电话</th>
+                            <th>车牌号</th>
+                            <th>创建人</th>
+                            <th>创建时间</th>
+                            <th>跟进人</th>
+                            <th>工单问题</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="content">
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">SZ20161110005</a></td>
+                            <td>查询</td>
+                            <td></td>
+                            <td>邮件</td>
+                            <td>罗欣欣</td>
+                            <td>13456895276</td>
+                            <td>粤B89876</td>
+                            <td>徐强</td>
+                            <td>2016-10-01</td>
+                            <td>张三</td>
+                            <td>客户询问更换套餐</td>
+                            <td>待客服处理</td>
+                            <td class="operate">
+                                <span class="view_info">查看</span>
+                                <span class="create_work_order">创建工单</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="operationBtn">
+                    <a href="#"><button class="goBack">返回</button></a>
+                </div>
+            </div>
+            <div class="violation_info">
+            	<ul>
+                	<li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>车辆信息</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table hide">
+                        	<table>
+                                <thead>
+                                    <tr>
+                                        <th>车牌号</th>
+                                        <th>发动机号</th>
+                                        <th>机架号</th>
+                                        <th>GPS设备号</th>
+                                        <th>车辆类型</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>粤E338G0</td>
+                                        <td>395440X</td>
+                                        <td>LGBHLJHKL9096</td>
+                                        <td>189562463</td>
+                                        <td>新车</td>
+                                    </tr>
+                            	</tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>违章信息</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table hide">
+                        	<table>
+                                <thead>
+                                    <tr>
+                                        <th>车牌号</th>
+                                        <th>客户姓名</th>
+                                        <th>违法记分</th>
+                                        <th>罚款金额</th>
+                                        <th>违法地点</th>
+                                        <th>违法行为</th>
+                                        <th>违法来源</th>
+                                        <th>违法事件</th>
+                                        <th>处理状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>粤E338G0</td>
+                                        <td>谢绍贵</td>
+                                        <td>0</td>
+                                        <td>200.00</td>
+                                        <td>【广东佛山】顺德大良南国中路车站对开路口</td>
+                                        <td>机动车违反禁止停车标志</td>
+                                        <td>电子警察</td>
+                                        <td>2016-10-20 13:30:20</td>
+                                        <td>未确认</td>
+                                    </tr>
+                            	</tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+                <div class="operationBtn">
+                    <a href="#"><button class="goBack">返回</button></a>
+                </div>
+            </div>
+            <div class="payment_list">
+            	<div class="icon">
+                	<em>图标含义</em>
+                    <span>
+                    	<img src="images/finance_paying.png" alt="paying">
+                        <b>：已支付，</b>
+                    </span>
+                    <span>
+                    	<img src="images/finance_arrearage.png" alt="arrearage">
+                        <b>：欠费</b>
+                    </span>
+                </div>
+            	<table>
+                    <thead>
+                        <tr>
+                            <th>图标</th>
+                            <th>生成月份</th>
+                            <th>交费日期</th>
+                            <th>车牌号</th>
+                            <th>客户姓名</th>
+                            <th>月租金</th>
+                            <th>租金</th>
+                            <th>软件管理费</th>
+                            <th>起租日期</th>
+                            <th>结束日期</th>
+                            <th>结算周期</th>
+                            <th>天数（第几月）</th>
+                            <th>应收月租</th>
+                            <th>实收租金</th>
+                            <th>实收软件管理费</th>
+                            <th>实收租金总额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        	<td><img src="images/finance_paying.png"></td>
+                            <td>2016-10</td>
+                            <td>2016-10-25</td>
+                            <td>粤E338G0</td>
+                            <td>谢绍贵</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>2016-10-25</td>
+                            <td>2018-10-25</td>
+                            <td></td>
+                            <td>14(1)</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>3750.00</td>
+                        </tr>
+                        <tr>
+                        	<td><img src="images/finance_paying.png"></td>
+                            <td>2016-10</td>
+                            <td>2016-10-25</td>
+                            <td>粤E338G0</td>
+                            <td>谢绍贵</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>2016-10-25</td>
+                            <td>2018-10-25</td>
+                            <td></td>
+                            <td>14(1)</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>3750.00</td>
+                        </tr>
+                        <tr>
+                        	<td><img src="images/finance_paying.png" alt="payment"></td>
+                            <td>2016-10</td>
+                            <td>2016-10-25</td>
+                            <td>粤E338G0</td>
+                            <td>谢绍贵</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>2016-10-25</td>
+                            <td>2018-10-25</td>
+                            <td></td>
+                            <td>14(1)</td>
+                            <td>3750.00</td>
+                            <td>3750.00</td>
+                            <td>0.00</td>
+                            <td>3750.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="operationBtn">
+                    <a href="#"><button class="goBack">返回</button></a>
+                </div>
+            </div>
+            <div class="insurance_claims">
+            	<ul>
+                    <li>
+                        <section class="list_option">
+                            <dl>
+                                <dd>保险报案号记录</dd>
+                                <dd class="slide"></dd>
+                            </dl>
+                        </section>
+                        <div class="data_table hide">
+                        	<table>
+                                <thead>
+                                    <tr>
+                                    	<th>序号</th>
+                                        <th>报案号</th>
+                                        <th>车牌号</th>
+                                        <th>事故时间</th>
+                                        <th>事故类型</th>
+                                        <th>理赔金额</th>
+                                        <th>标的定损金额</th>
+                                        <th>折旧费</th>
+                                        <th>应退金额</th>
+                                        <th>已退款金额</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    	<td>1</td>
+                                        <td>RDAA20151025008012455</td>
+                                        <td>粤E338G0</td>
+                                        <td>2016-09-20</td>
+                                        <td>单方事故</td>
+                                        <td>2500.00</td>
+                                        <td>1500.00</td>
+                                        <td>300.00</td>
+                                        <td>2200.00</td>
+                                        <td>1900.00</td>
+                                        <td class="operate">
+                                            <span class="">理赔记录</span>
+                                            <span class="">退款记录</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<td>2</td>
+                                        <td>RDAA20151025008012455</td>
+                                        <td>粤E338G0</td>
+                                        <td>2016-09-20</td>
+                                        <td>单方事故</td>
+                                        <td>2500.00</td>
+                                        <td>1500.00</td>
+                                        <td>300.00</td>
+                                        <td>2200.00</td>
+                                        <td>1900.00</td>
+                                        <td class="operate">
+                                            <span class="">理赔记录</span>
+                                            <span class="">退款记录</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<td>3</td>
+                                        <td>RDAA20151025008012455</td>
+                                        <td>粤E338G0</td>
+                                        <td>2016-09-20</td>
+                                        <td>单方事故</td>
+                                        <td>2500.00</td>
+                                        <td>1500.00</td>
+                                        <td>300.00</td>
+                                        <td>2200.00</td>
+                                        <td>1900.00</td>
+                                        <td class="operate">
+                                            <span class="">理赔记录</span>
+                                            <span class="">退款记录</span>
+                                        </td>
+                                    </tr>
+                            	</tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+                <div class="operationBtn">
+                    <a href="#"><button class="goBack">返回</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

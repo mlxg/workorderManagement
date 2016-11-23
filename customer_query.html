@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>客户查询</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/work_order.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/work_order.js"></script>
+</head>
+<body>
+    <div class="customer_query">
+        <div class="headerbar">
+            <form id="queryForm">
+                <ul>
+                    <li>
+                        <label>订单类型：</label>
+                        <select>
+                            <option value="1">业务订单</option>
+                            <option value="2">库存订单</option>
+                        </select>
+                    </li>                    
+                    <li>
+                        <label>客户名称：</label>
+                        <input type="text" maxlength="20">
+                    </li>
+                    <li>
+                        <label>车牌号：</label>
+                        <input type="text" maxlength="10">
+                    </li>
+                    <li>
+                        <label>手机号码：</label>
+                        <input type="text" maxlength="30">
+                    </li>
+                    <li>
+                        <label>销售人员：</label>
+                        <input type="text" maxlength="30">
+                    </li>
+                    <li>
+                        <label>订单日期：</label>
+                        <input class="form_date" type="text" value="" readonly onclick="SelectDate(this,'yyyy-MM-dd')">
+                        <i>-</i>
+                        <input class="form_date" type="text" value="" readonly onclick="SelectDate(this,'yyyy-MM-dd')">
+                    </li>
+                </ul>
+            </form>  
+            <div class="btn_bar">
+                <button class="query_btn">查询</button>
+                <button class="reset_btn">重置</button>
+                <button class="create_btn">创建工单</button>
+            </div> 
+        </div>
+        <div class="contentbar">
+        	<table>
+                <thead>
+                    <tr>
+                        <th>客户姓名</th>
+                        <th>城市</th>
+                        <th>移动电话</th>
+                        <th>销售人员</th>
+                        <th>销售经理</th>
+                        <th>业务类型</th>
+                        <th>订单号</th>
+                        <th>详情</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="content">
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>张魁梧</td>
+                        <td>深圳市</td>
+                        <td>13456895276</td>
+                        <td>罗欣欣</td>
+                        <td>徐强</td>
+                        <td>汽车租赁</td>
+                        <td><a href="#">SZ20161110005</a></td>
+                        <td>0705粤S 朗逸 36C</td>
+                        <td>待提交</td>
+                        <td class="operate">
+                            <span class="view_info">查看</span>
+                            <span class="create_work_order">创建工单</span>
+                            <span class="assign">指派</span>
+                            <span class="turn_the_business">转业务</span>
+                            <span class="close_out">结案</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+            <div id="hiddenresult" style="display:none;"></div>
+        </div>
+    </div>
+    <div class="approve_popup workorder_lay">
+        <div class="approve_popup_box scale-anim">
+        	<p class="workorder_title">工单指派</p>
+            <ul>
+            	<li>
+                    <label>当前跟进人：</label>
+                    <span>张三</span>
+                </li>
+                <li>
+                    <label><b class="star">*</b>指派客服对象：</label>
+                    <select>
+                    	<option value="1">请选择</option>
+                        <option>李四</option>
+                        <option>王五</option>
+                    </select>
+                </li>
+                <li>
+                    <label>备注说明：</label>
+                    <textarea  placeholder="填写备注说明"></textarea>
+                </li>
+            </ul>
+            <div class="btn_bar">
+                <button class="complete">确定</button>
+                <button class="go_back">取消</button>
+            </div>
+            <div class="closed_pup"></div>                
+        </div>
+    </div>
+    <div class="approve_popup business_lay">
+        <div class="approve_popup_box scale-anim">
+        	<p class="workorder_title">工单转交</p>
+            <ul>
+                <li>
+                    <label>工单流转：</label>
+                    <select>
+                    	<option value="1">运营部处理</option>
+                        <option>财务部处理</option>
+                        <option>销售部处理</option>
+                        <option>法务部处理</option>
+                    </select>
+                </li>
+                <li>
+                    <label>备注说明：</label>
+                    <textarea  placeholder="填写备注说明"></textarea>
+                </li>
+            </ul>
+            <div class="btn_bar">
+                <button class="complete">确定</button>
+                <button class="go_back">取消</button>
+            </div>
+            <div class="closed_pup"></div>                
+        </div>
+    </div>
+    <div class="approve_popup close_out_lay">
+        <div class="approve_popup_box scale-anim">
+        	<p class="workorder_title">工单结案</p>
+            <ul>
+                <li>
+                    <span>是否确定结案此工单？</span>
+                </li>
+                <li>
+                    <label><b class="star">*</b>备注意见：</label>
+                    <textarea  placeholder="填写备注意见"></textarea>
+                </li>
+            </ul>
+            <div class="btn_bar">
+                <button class="complete">确定</button>
+                <button class="go_back">取消</button>
+            </div>
+            <div class="closed_pup"></div>                
+        </div>
+    </div>
+    <script type="text/javascript" src="js/adddate.js" ></script>
+</body>
+</html>
