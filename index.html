@@ -6,26 +6,15 @@
 </head>
 <body>
 
-<span id="radio">
-    <input type="radio" value="1" name="i" title="">
-    <input type="radio" value="2" name="i" title="">
-    <input type="radio" value="3" name="i" title="">
-</span>
 <input type="text" value="" id="customerName" name="carNo">
-<select name="getData" id="select_1" title="">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-</select>
 
 <input id="orderCheck" type="button" value="查询"/>
-<!--<div id="userData"></div>-->
 <table id="rsData">
     <thead>
     <tr>
-        <th>name</th>
-        <th>性别</th>
-        <th>邮箱</th>
+        <th>车辆编号</th>
+        <th>客户姓名</th>
+        <th>手机号码</th>
     </tr>
     </thead>
     <tbody>
@@ -60,7 +49,7 @@
         var $businessDepatmentId = $("#businessDepatmentId").val();
 
         var uData = {
-            "carNo": $caiNo,
+            /*"carNo": $caiNo,
              "createBy.name": $createBy,
              "customerName": $customerName,
              "follower.name": $followerName,
@@ -74,9 +63,9 @@
              "startFinishDate": $startFinishDate,
              "endFinishDate": $startFinishDate,
              "status": $status,
-             "businessDepatmentId": $businessDepatmentId
+             "businessDepatmentId": $businessDepatmentId*/
 
-            /*"carNo": "2312312",
+            "carNo": "2312312",
              "createBy.name": "管理",
              "customerName": "123",
              "follower.name": "风控",
@@ -90,12 +79,12 @@
              "startFinishDate": "",
              "endFinishDate": "",
              "status": "",
-             "businessDepatmentId": ""*/
+             "businessDepatmentId": ""
         };
 
         $.ajax({
             headers: {'Content-Type': 'application/json'},
-            url: 'http://192.168.1.211:8888/a/kefu/workOrder/list',
+            url: 'http://localhost:8888/a/kefu/workOrder/list',
             async: true,
             type: 'post',
             data: JSON.stringify(uData),
@@ -111,9 +100,9 @@
 
             $.each($json, function (index,value) {
                 strHtml += '<tr>';
-                strHtml += '<td>' + value.id + '</td>';
-                strHtml += '<td>' + value.isNewRecord + '</td>';
+                strHtml += '<td>' + value.carNo + '</td>';
                 strHtml += '<td>' + value.customerName + '</td>';
+                strHtml += '<td>' + value.mobile + '</td>';
                 strHtml += '</tr>';
             });
 
