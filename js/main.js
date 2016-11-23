@@ -104,7 +104,21 @@ function checkOrder() {
             $.each($json, function (index, value) {
                 strHtml += '<tr>';
                 strHtml += '<td>' + value.workOrderNo + '</td>';
+                strHtml += '<td>' + value.type + '</td>';
+                strHtml += '<td>' + value.problemType + '</td>';
+                strHtml += '<td>' + value.source + '</td>';
+                strHtml += '<td>' + value.customerName + '</td>';
+                strHtml += '<td>' + value.mobile + '</td>';
+                strHtml += '<td>' + value.carNo + '</td>';
+                strHtml += '<td>' + value.salesman + '</td>';
+                strHtml += '<td>' + value.salesManager + '</td>';
+                strHtml += '<td>' + value.createBy + '</td>';
+                strHtml += '<td>' + value.createData + '</td>';
+                strHtml += '<td>' + value.follower + '</td>';
+                strHtml += '<td>' + value.question + '</td>';
+                strHtml += '<td>' + value.question + '</td>';
                 strHtml += '</tr>';
+
             });
 
             $rsData.html(strHtml);
