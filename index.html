@@ -6,15 +6,15 @@
 </head>
 <body>
 
-<input type="text" value="" name="carNo"/>
-<input type="text" value="" name="workOrderNo"/>
+<input type="text" value="" name="carNo" v-model="carNo"/>
+<input type="text" value="" name="workOrderNo" v-model="workOrderNo"/>
 <input id="orderCheck" type="button" value="查询"/>
+<input id="resetData" type="button" value="重置"/>
 
-<table id="rsData">    &nbsp;
+<table id="rsData">
     <thead>
     <tr>
-        <th>车辆编号</th>
-        <th>工单编号</th>
+        <th v-for="key in columns">{{key}}</th>
     </tr>
     </thead>
     <tbody>
@@ -31,13 +31,21 @@
 
     var $path = 'http://localhost:8888/a';
 
+
+
     $(function () {
-        $('#orderCheck').click(function () {
+
+        $(document).on('click', '#orderCheck', function () {
+//        $('#orderCheck').click(function () {
             searchData();
         });
+
+        $(document).on('click', '#resetData', function () {
+//        $('#resetData').click(function () {
+
+            getData();
+        });
     });
-
-
 
     function searchData() {
 
@@ -65,10 +73,30 @@
                         items: obj
                     }
                 });
+            }
+        });
+    }
+
+    function getData() {
+        $.ajax({
+            contentType: 'application/json',
+            url: $path + '/kefu/workOrder/list',
+            async: true,
+            type: 'post',
+            data: JSON.stringify(uData),
+            success: function (data) {
 
             }
         });
     }
+
+    new Vue({
+        el: '#rsData',
+        data: {
+            items: data.model.list,
+            columns:['车辆编号', '工单编号']
+        }
+    });
 </script>
 </body>
 </html>
