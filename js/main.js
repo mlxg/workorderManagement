@@ -51,7 +51,7 @@ function listShow() {
  * 查询工单
  * */
 function checkOrder() {
-    $('#checkOrder').on('click', orderSearch);
+    $('.checkBtn').on('click', orderSearch);
     function orderSearch() {
         var $carNo = $('.carNo').val();
         var $createBy = $('.createBy').val();
@@ -99,10 +99,12 @@ function checkOrder() {
         function rsData(data) {
             var strHtml = '';
             var $rsData = $('.rsData').find('tbody');
-            var $json = eval(data['model']['list']);
+            // var $json = eval(data['model']['list']);
 
-            $.each($json, function (index, value) {
-                strHtml += '<tr>';
+            $.each(data.model.list, function (index, value) {
+
+                alert(value.workOrderNo);
+                /*strHtml += '<tr>';
                 strHtml += '<td>' + value.workOrderNo + '</td>';
                 strHtml += '<td>' + value.type + '</td>';
                 strHtml += '<td>' + value.problemType + '</td>';
@@ -117,7 +119,7 @@ function checkOrder() {
                 strHtml += '<td>' + value.follower + '</td>';
                 strHtml += '<td>' + value.question + '</td>';
                 strHtml += '<td>' + value.question + '</td>';
-                strHtml += '</tr>';
+                strHtml += '</tr>';*/
 
             });
 
