@@ -5,49 +5,53 @@
     <title>Title</title>
 </head>
 <body>
+<div id="rsData">
+    <form action="">
+        <input type="text" value="" name="carNo"/>
+        <input type="text" value="" name="workOrderNo"/>
+        <input id="orderCheck" type="button" value="查询"/>
+        <input id="resetData" type="button" value="重置"/>
+    </form>
+    <s_grid :filter-key="searchQuery"></s_grid>
+</div>
 
-<input type="text" value="" name="carNo" v-model="carNo"/>
-<input type="text" value="" name="workOrderNo" v-model="workOrderNo"/>
-<input id="orderCheck" type="button" value="查询"/>
-<input id="resetData" type="button" value="重置"/>
 
-<table id="rsData">
-    <thead>
-    <tr>
-        <th v-for="key in columns">{{key}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr v-for="item in items">
-        <td>{{item.carNo}}</td>
-        <td>{{item.workOrderNo}}</td>
-    </tr>
-    </tbody>
-</table>
+<!--table-->
+<script type="text/x-template" id="grid-template">
+    <table>
+        <thead>
+        <tr>
+            <th v-for="key in columns">{{key]}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in model">
+            <td v-for="key in columns">{{item[key]}}</td>
+        </tr>
+        </tbody>
+    </table>
+</script>
 
 <script src="./js/jquery.1.8.3.min.js"></script>
 <script src="./js/vue.js"></script>
 <script>
-
     var $path = 'http://localhost:8888/a';
 
-
-
     $(function () {
-
+        getData();
         $(document).on('click', '#orderCheck', function () {
-//        $('#orderCheck').click(function () {
-            searchData();
-        });
-
-        $(document).on('click', '#resetData', function () {
-//        $('#resetData').click(function () {
-
-            getData();
+            console.log(0)
         });
     });
 
-    function searchData() {
+    Vue.component('s_grid', {
+        template: '#grid-template',
+        props: {
+            filterKey: String
+        }
+    });
+
+    function getData() {
 
         var carNo = $('input[name=carNo]').val();
         var workOrderNo = $('input[name=workOrderNo]').val();
@@ -58,7 +62,6 @@
             'workOrderNo': workOrderNo
         };
 
-        //  getData
         $.ajax({
             contentType: 'application/json',
             url: $path + '/kefu/workOrder/list',
@@ -70,33 +73,15 @@
                 new Vue({
                     el: '#rsData',
                     data: {
-                        items: obj
+//                        filterData: '',
+                        items: obj,
+                        columns: ['车辆编号', '工单编号']
                     }
                 });
             }
         });
     }
 
-    function getData() {
-        $.ajax({
-            contentType: 'application/json',
-            url: $path + '/kefu/workOrder/list',
-            async: true,
-            type: 'post',
-            data: JSON.stringify(uData),
-            success: function (data) {
-
-            }
-        });
-    }
-
-    new Vue({
-        el: '#rsData',
-        data: {
-            items: data.model.list,
-            columns:['车辆编号', '工单编号']
-        }
-    });
 </script>
 </body>
 </html>
