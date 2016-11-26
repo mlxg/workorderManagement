@@ -6,14 +6,43 @@
 </head>
 <body>
 
+<div id="rsData">
+    <form action="">
+        <input type="text" value="" name="carNo"/>
+        <input type="text" value="" name="workOrderNo"/>
+        <input id="orderCheck" type="button" value="查询"/>
+        <input id="resetData" type="button" value="重置"/>
+    </form>
+    <s_grid :filter-key="searchQuery"></s_grid>
+</div>
+
+
+<!--table-->
+<script type="text/x-template" id="grid-template">
+    <table>
+        <thead>
+        <tr>
+            <th v-for="key in columns">{{key]}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in model">
+            <td v-for="key in columns">{{item[key]}}</td>
+        </tr>
+        </tbody>
+    </table>
+</script>
+
+
 <input type="text" value="" name="carNo"/>
 <input type="text" value="" name="workOrderNo"/>
-<!--<input id="orderCheck" type="button" value="查询"/>-->
+<input id="orderCheck" type="button" value="查询"/>
 
 <table id="rsData">
     <thead>
     <tr>
-        <th v-for="key in columns">{{key}}</th>
+        <th>车辆编号</th>
+        <th>工单编号</th>
     </tr>
     </thead>
     <tbody>
@@ -31,8 +60,25 @@
     var $path = 'http://localhost:8888/a';
 
     $(function () {
+
         getData();
+        $(document).on('click', '#orderCheck', function () {
+            console.log(0)
+        });
     });
+
+    Vue.component('s_grid', {
+        template: '#grid-template',
+        props: {
+            filterKey: String
+        }
+    });
+
+    $('#orderCheck').click(function () {
+        searchData();
+    });
+
+
 
     function getData() {
 
@@ -53,10 +99,10 @@
             data: JSON.stringify(uData),
             success: function (data) {
                 var obj = data.model.list;
-
                 new Vue({
                     el: '#rsData',
                     data: {
+//                        filterData: '',
                         items: obj,
                         columns: ['车辆编号', '工单编号']
                     }
