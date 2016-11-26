@@ -1,0 +1,58 @@
+{
+    "page_num": 1,
+    "total": 4,
+    "rows": [
+        {
+            "status": "待客服处理",
+            "problemCP": 1,
+            "problemHT": 0,
+            "problemBX": 1,
+            "problemWX": 1,
+            "problemQZ": 0,
+            "problemWZ": 1,
+            "problemQT": 0,
+            "orderTS": 0,
+            "orderYJ": 0,
+            "orderQT": 0
+        },
+        {
+            "status": "待业务处理",
+            "problemCP": 1,
+            "problemHT": 0,
+            "problemBX": 1,
+            "problemWX": 1,
+            "problemQZ": 0,
+            "problemWZ": 1,
+            "problemQT": 0,
+            "orderTS": 0,
+            "orderYJ": 1,
+            "orderQT": 0
+        },
+        {
+            "status": "待客服确认",
+            "problemCP": 0,
+            "problemHT": 0,
+            "problemBX": 0,
+            "problemWX": 0,
+            "problemQZ": 0,
+            "problemWZ": 0,
+            "problemQT": 0,
+            "orderTS": 1,
+            "orderYJ": 0,
+            "orderQT": 1
+        },
+        {
+            "status": "已结案",
+            "problemCP": 0,
+            "problemHT": 0,
+            "problemBX": 0,
+            "problemWX": 0,
+            "problemQZ": 0,
+            "problemWZ": 0,
+            "problemQT": 0,
+            "orderTS": 0,
+            "orderYJ": 0,
+            "orderQT": 0
+        }
+    ]
+}
